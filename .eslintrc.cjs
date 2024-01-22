@@ -14,13 +14,11 @@ module.exports = {
     'prettier',
   ],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
+  ignore: ['.git-commit-template'],
   parser: '@typescript-eslint/parser',
-  plugins: ['react-refresh','@typescript-eslint', 'prettier'],
+  plugins: ['react-refresh', '@typescript-eslint', 'prettier'],
   rules: {
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
-    ],
+    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     // var 금지
     'no-var': 'warn',
     // 일치 연산자 사용 필수
