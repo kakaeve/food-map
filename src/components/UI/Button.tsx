@@ -10,7 +10,7 @@ type ButtonPorps = {
   disabled: ButtonHTMLAttributes<HTMLButtonElement>['disabled']
 }
 
-export const Button = (props: ButtonPorps) => {
+const Button = (props: ButtonPorps) => {
   return (
     <button
       type="button"
@@ -22,3 +22,5 @@ export const Button = (props: ButtonPorps) => {
     </button>
   )
 }
+
+export default Button
