@@ -5,6 +5,7 @@ import classes from './Input.module.css'
 type InputProps = {
   isValid: boolean
   id: string
+  labelName: string
   type: InputHTMLAttributes<HTMLInputElement>['type']
   value: InputHTMLAttributes<HTMLInputElement>['value']
   onChange: InputHTMLAttributes<HTMLInputElement>['onChange']
