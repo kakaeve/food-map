@@ -13,11 +13,10 @@ type InputProps = {
 }
 
 const Input = React.forwardRef((props: InputProps, ref) => {
-  const inputRef = useRef(null)
+  const inputRef = useRef<HTMLInputElement>(null)
   const activate = () => {
-    inputRef.current.focuse()
+    inputRef.current.focus()
   }
-
   useImperativeHandle(ref, () => {
     return {
       focus: activate,
@@ -25,7 +24,7 @@ const Input = React.forwardRef((props: InputProps, ref) => {
   })
   return (
     <div className={`${classes.control} ${props.isValid === false ? classes.invalid : ''}`}>
-      <label htmlFor={props.id}>props.labelName</label>
+      <label htmlFor={props.id}>{props.labelName}</label>
       <input
         ref={inputRef}
         id={props.id}
